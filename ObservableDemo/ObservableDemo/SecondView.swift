@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SecondView: View {
     
-    @ObservedObject var timerData: TimerData = TimerData()
+    @EnvironmentObject var timerData: TimerData
     
     var body: some View {
         VStack {
@@ -25,6 +25,6 @@ struct SecondView: View {
 
 struct SecondView_Previews: PreviewProvider {
     static var previews: some View {
-        SecondView(timerData: TimerData())
+        SecondView().environmentObject(TimerData())
     }
 }
