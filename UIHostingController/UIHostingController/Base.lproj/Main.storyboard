@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uSZ-7B-zMC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hosting Controller-->
+        <scene sceneID="YBh-PG-IDE">
+            <objects>
+                <hostingController id="n0E-N7-2th" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P1T-4z-jQ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="-293"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIHostingController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SN-xO-mxJ">
+                                <rect key="frame" x="125" y="433" width="165" height="30"/>
+                                <state key="normal" title="Show second screen"/>
+                                <connections>
+                                    <segue destination="hGA-1j-3C4" kind="show" destinationCreationSelector="howSwiftUIView:" id="Ci5-uj-Ex8"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kd2-pp-IHb">
+                                <rect key="frame" x="20" y="549" width="374" height="313"/>
+                                <connections>
+                                    <segue destination="n0E-N7-2th" kind="embed" destinationCreationSelector="embedSwiftUIView:" id="Com-ag-7RX"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7SN-xO-mxJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="345" id="2Jo-XH-WLV"/>
+                            <constraint firstItem="7SN-xO-mxJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="59F-nW-aaS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kd2-pp-IHb" secondAttribute="trailing" constant="20" id="BC4-7Q-p5d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7SN-xO-mxJ" secondAttribute="trailing" constant="124" id="Pr3-lO-h8K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kd2-pp-IHb" secondAttribute="bottom" id="Vvc-1f-qrJ"/>
+                            <constraint firstItem="kd2-pp-IHb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hcu-cj-Wq2"/>
+                            <constraint firstItem="kd2-pp-IHb" firstAttribute="top" secondItem="7SN-xO-mxJ" secondAttribute="bottom" constant="86" id="m6W-a9-h5H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bt8-WC-gln"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.985507246377" y="126.5625"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="yCQ-ga-NQc">
+            <objects>
+                <hostingController id="hGA-1j-3C4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4tr-X0-krW"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MHv-RD-Nmr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874" y="120"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hb9-LW-x9x">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uSZ-7B-zMC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IUL-Ty-Wl3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WPV-fi-K7M"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6M-Mv-6Ai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
